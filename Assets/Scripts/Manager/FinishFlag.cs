@@ -11,7 +11,7 @@ public class FinishFlag : MonoBehaviour
             SceneController.instance.NextLevel();
         }    
     }
-
+        
     void UnlockNewLevel()
     {
         int currentLevel = SceneManager.GetActiveScene().buildIndex;

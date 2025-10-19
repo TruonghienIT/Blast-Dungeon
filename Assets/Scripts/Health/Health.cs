@@ -27,6 +27,13 @@ public class Health : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
     }
+    private void Update()
+    {
+        if(transform.position.y <= -7.2f)
+        {
+            DieByFalling();
+        }    
+    }
     public void TakeDamage(float _damage)
     {
         if (invulnerable) return;
@@ -57,6 +64,10 @@ public class Health : MonoBehaviour
             }
         }
     }
+    private void DieByFalling()
+    {
+        TakeDamage(currentHealth);
+    }    
     public void AddHealth(float _healthValue)
     {
         currentHealth = Mathf.Clamp(currentHealth + _healthValue, 0, startingHeath);

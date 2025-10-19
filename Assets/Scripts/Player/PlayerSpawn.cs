@@ -33,5 +33,9 @@ public class PlayerSpawn : MonoBehaviour
             collision.GetComponent<Collider2D>().enabled = false;
             collision.GetComponent<Animator>().SetTrigger("apprear");
         }    
+        if(collision.transform.tag == "Start")
+        {
+            collision.GetComponent<Animator>().SetTrigger("apprear");
+        }    
     }
 }

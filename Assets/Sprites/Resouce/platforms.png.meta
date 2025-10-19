@@ -113,9 +113,9 @@ TextureImporter:
       name: platforms_0
       rect:
         serializedVersion: 2
-        x: 17
+        x: 16
         y: 7
-        width: 31
+        width: 32
         height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -134,9 +134,9 @@ TextureImporter:
       name: platforms_1
       rect:
         serializedVersion: 2
-        x: 17
+        x: 16
         y: 55
-        width: 31
+        width: 32
         height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -155,9 +155,9 @@ TextureImporter:
       name: platforms_2
       rect:
         serializedVersion: 2
-        x: 17
+        x: 16
         y: 39
-        width: 31
+        width: 32
         height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -176,12 +176,12 @@ TextureImporter:
       name: platforms_3
       rect:
         serializedVersion: 2
-        x: 17
+        x: 16
         y: 23
-        width: 31
+        width: 32
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
