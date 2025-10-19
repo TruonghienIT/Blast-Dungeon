@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -22,7 +22,7 @@ public class Health : MonoBehaviour
     [SerializeField] private AudioClip deathSound;
     [SerializeField] private AudioClip hurtSound;
     private void Awake()
-    {
+    {   
         currentHealth = startingHeath;
         animator = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
@@ -42,6 +42,12 @@ public class Health : MonoBehaviour
             if (!dead)
             {
                 animator.SetTrigger("die");
+                Rigidbody2D  rb = GetComponent<Rigidbody2D>();
+                if(rb != null)
+                {
+                    rb.velocity = Vector2.zero;
+                    rb.isKinematic = true;
+                }    
                 foreach (Behaviour component in components)
                 {
                     component.enabled = false;

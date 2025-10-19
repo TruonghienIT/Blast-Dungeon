@@ -155,10 +155,10 @@ TextureImporter:
       name: Terrain (16x16) 1_2
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
-        width: 64
-        height: 48
+        x: 98
+        y: 66
+        width: 44
+        height: 44
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -366,9 +366,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 0
-        width: 64
-        height: 48
+        y: 32
+        width: 48
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,7 +433,7 @@ TextureImporter:
         width: 2
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -32,11 +32,17 @@ public class UiManager : MonoBehaviour
     }    
     public void Restart()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }    
+    public void Resume()
+    {
+        pauseScreen.SetActive(false);
+        Time.timeScale = 1f;
     }    
     public void MainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Main Menu");
     }
     public void Quit()
     {
@@ -60,14 +66,6 @@ public class UiManager : MonoBehaviour
         {
             Time.timeScale = 1;
         }
-    }  
-    public void SoundVolume()
-    {
-        SoundManager.instance.ChangSoundVolume(0.2f);
-    }
-    public void MusicVolume()
-    {
-        SoundManager.instance.ChangeMusicVolume(0.2f);
     }
     #endregion
 }

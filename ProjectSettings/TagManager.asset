@@ -8,6 +8,8 @@ TagManager:
   - Door
   - Enemy
   - Checkpoint
+  - MusicSlider
+  - SFXSlider
   layers:
   - Default
   - TransparentFX
@@ -51,9 +53,12 @@ TagManager:
   - name: Foreground
     uniqueID: 256430139
     locked: 0
+  - name: Ground
+    uniqueID: 1177629865
+    locked: 0
   - name: Player
     uniqueID: 4238107035
     locked: 0
-  - name: Ground
-    uniqueID: 1177629865
+  - name: Item
+    uniqueID: 3243851083
     locked: 0

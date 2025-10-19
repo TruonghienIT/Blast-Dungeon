@@ -201,6 +201,8 @@ MonoBehaviour:
   spriteRend: {fileID: 0}
   components:
   - {fileID: 1467920793085125737}
+  deathSound: {fileID: 8300000, guid: 4df619600f587dc41878a4414c93941f, type: 3}
+  hurtSound: {fileID: 8300000, guid: 5c30bef23715cc34d9b82b34b60c7701, type: 3}
 --- !u!114 &1467920793085125737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,6 +223,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
+  attackSound: {fileID: 0}
 --- !u!114 &8488596190463055004
 MonoBehaviour:
   m_ObjectHideFlags: 0
