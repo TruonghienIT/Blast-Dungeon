@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -35,5 +35,13 @@ public class SceneController : MonoBehaviour
         yield return new WaitForSeconds(1);
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         transitionAnim.SetTrigger("Start");
-    }    
+    }
+    //public void ResetData()
+    //{
+    //    PlayerPrefs.DeleteKey("unlockedLevel");
+    //    PlayerPrefs.DeleteKey("ReachedIndex");
+    //    PlayerPrefs.Save();
+
+    //    Debug.Log("Progress Reset!");
+    //}
 }

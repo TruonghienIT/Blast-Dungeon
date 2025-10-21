@@ -63,3 +63,6 @@ TagManager:
   - name: Item
     uniqueID: 3243851083
     locked: 0
+  - name: HpBar
+    uniqueID: 1259209759
+    locked: 0

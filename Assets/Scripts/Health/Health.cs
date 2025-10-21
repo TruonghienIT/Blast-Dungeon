@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -21,11 +22,15 @@ public class Health : MonoBehaviour
     [Header("Death Sound")]
     [SerializeField] private AudioClip deathSound;
     [SerializeField] private AudioClip hurtSound;
+
+    [Header("Hp Bar")]
+    [SerializeField] private Image hpBar;
     private void Awake()
     {   
         currentHealth = startingHeath;
         animator = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
+        UpdateHpbar();
     }
     private void Update()
     {
@@ -38,6 +43,7 @@ public class Health : MonoBehaviour
     {
         if (invulnerable) return;
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHeath);
+        UpdateHpbar();
         if (currentHealth > 0)
         {
             animator.SetTrigger("hurt");
@@ -101,5 +107,12 @@ public class Health : MonoBehaviour
     private void Deactivate()
     {
         gameObject.SetActive(false);
+    }    
+    private void UpdateHpbar()
+    {
+        if (hpBar != null)
+        {
+            hpBar.fillAmount = currentHealth/startingHeath;
+        }
     }    
 }
