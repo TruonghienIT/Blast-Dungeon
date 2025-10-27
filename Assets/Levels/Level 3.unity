@@ -24095,19 +24095,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &4393574424414384898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9119161625294428521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81b16a815c04ed343ba18909ab01a344, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkPointSound: {fileID: 8300000, guid: 7a48d13458c5c304487d57e242d133ab, type: 3}
 --- !u!1 &4435693101556042403
 GameObject:
   m_ObjectHideFlags: 0
@@ -25436,6 +25423,7 @@ GameObject:
   - component: {fileID: 6234524746225318822}
   - component: {fileID: 750719703448554656}
   - component: {fileID: 4677962535496372130}
+  - component: {fileID: 8665094168422484864}
   m_Layer: 0
   m_Name: Start (Idle)
   m_TagString: Start
@@ -27443,7 +27431,7 @@ Transform:
   m_GameObject: {fileID: 9102948919694534313}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 43.58, y: -3.72, z: 0}
+  m_LocalPosition: {x: 20.18, y: 0.52, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28063,7 +28051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1001 &7953290360626594262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28916,6 +28904,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 709600940}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8665094168422484864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5732368625338480247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9272a50d60580cf4fbbb40092321f7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8856283646550373429
 GameObject:
   m_ObjectHideFlags: 0
@@ -29081,7 +29081,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4122424657599181575}
         m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
-        m_MethodName: Restart
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29229,7 +29229,6 @@ GameObject:
   - component: {fileID: 4031462497425886481}
   - component: {fileID: 9065479552413098404}
   - component: {fileID: 1270229446039138376}
-  - component: {fileID: 4393574424414384898}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player

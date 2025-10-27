@@ -16,7 +16,9 @@ public class SoundManager : MonoBehaviour
 
     [Header("Music Clips")]
     public AudioClip menuMusic;
-    public AudioClip levelMusic;
+    public AudioClip level1Music;
+    public AudioClip level2Music;
+    public AudioClip level3Music;
 
     [Header("UI Sliders (Optional)")]
     public Slider masterVol;
@@ -83,13 +85,21 @@ public class SoundManager : MonoBehaviour
         {
             PlayMusic(menuMusic);
         }
-        else
+        else if(scene.name == "Level 1")
         {
-            PlayMusic(levelMusic);
+            PlayMusic(level1Music);
+        }
+        else if (scene.name == "Level 2")
+        {
+            PlayMusic(level2Music);
+        }
+        else if (scene.name == "Level 3")
+        {
+            PlayMusic(level3Music);
         }
     }
 
-    // ---- Xử lý Volume ----
+    // xử lý volume
     private void SyncSlidersWithPrefs()
     {
         if (masterVol) masterVol.value = PlayerPrefs.GetFloat("MasterVolume", 0.75f);

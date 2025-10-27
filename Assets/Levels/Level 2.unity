@@ -6737,7 +6737,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: RESTART
+  m_text: RESUME
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fd61260d92b9afb4da3c4d9427c2c492, type: 2}
   m_sharedMaterial: {fileID: -3860473545634166438, guid: fd61260d92b9afb4da3c4d9427c2c492, type: 2}
@@ -9170,19 +9170,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4393574424414384898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9119161625294428521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81b16a815c04ed343ba18909ab01a344, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkPointSound: {fileID: 8300000, guid: 7a48d13458c5c304487d57e242d133ab, type: 3}
 --- !u!1 &4435693101556042403
 GameObject:
   m_ObjectHideFlags: 0
@@ -9371,6 +9358,7 @@ GameObject:
   - component: {fileID: 6404758072856989185}
   - component: {fileID: 291653322398546183}
   - component: {fileID: 5659978637123287557}
+  - component: {fileID: 8513957846896951001}
   m_Layer: 0
   m_Name: Start (Idle)
   m_TagString: Start
@@ -12237,6 +12225,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 709600940}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8513957846896951001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4749688289948353488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9272a50d60580cf4fbbb40092321f7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8524621048986852879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12821,7 +12821,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4122424657599181575}
         m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
-        m_MethodName: Restart
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12964,7 +12964,6 @@ GameObject:
   - component: {fileID: 4031462497425886481}
   - component: {fileID: 9065479552413098404}
   - component: {fileID: 1270229446039138376}
-  - component: {fileID: 4393574424414384898}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player

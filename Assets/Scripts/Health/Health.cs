@@ -25,19 +25,20 @@ public class Health : MonoBehaviour
 
     [Header("Hp Bar")]
     [SerializeField] private Image hpBar;
+
+    [Header ("Game Over")]
+    private UiManager uiManager;
     private void Awake()
     {   
         currentHealth = startingHeath;
         animator = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
+        uiManager = FindObjectOfType<UiManager>();
         UpdateHpbar();
     }
     private void Update()
     {
-        if(transform.position.y <= -7.2f)
-        {
-            DieByFalling();
-        }    
+        DieByFalling();    
     }
     public void TakeDamage(float _damage)
     {
@@ -67,29 +68,37 @@ public class Health : MonoBehaviour
                 }
                 dead = true;
                 SoundManager.instance.PlaySound(deathSound);
+                if (CompareTag("Player") && uiManager != null)
+                    StartCoroutine(GameOver(1f));
             }
         }
     }
+    private IEnumerator GameOver(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        uiManager.GameOver();   
+    }    
     private void DieByFalling()
     {
-        TakeDamage(currentHealth);
+        if (transform.position.y <= -7.2f)
+            TakeDamage(currentHealth);
     }    
     public void AddHealth(float _healthValue)
     {
         currentHealth = Mathf.Clamp(currentHealth + _healthValue, 0, startingHeath);
     }
-    public void Respawn()
-    {
-        dead = false;
-        AddHealth(startingHeath);
-        animator.ResetTrigger("die");
-        animator.Play("PlayerIdle");
-        StartCoroutine(Invincibility());
-        foreach (Behaviour component in components)
-        {
-            component.enabled = true;
-        }
-    }    
+    //public void Respawn()
+    //{
+    //    dead = false;
+    //    AddHealth(startingHeath);
+    //    animator.ResetTrigger("die");
+    //    animator.Play("PlayerIdle");
+    //    StartCoroutine(Invincibility());
+    //    foreach (Behaviour component in components)
+    //    {
+    //        component.enabled = true;
+    //    }
+    //}    
     private IEnumerator Invincibility()
     {
         invulnerable = true;

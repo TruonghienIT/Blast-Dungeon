@@ -5,6 +5,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject optionPanel;
     [SerializeField] private GameObject levelPanel;
+    [SerializeField] private GameObject instructionPanel;
     public void PlayGame()
     {
         levelPanel.SetActive(true);
@@ -20,9 +21,15 @@ public class MainMenu : MonoBehaviour
         mainMenu.SetActive(true);
         optionPanel.SetActive(false);
         levelPanel.SetActive(false);
+        instructionPanel.SetActive(false);
     }    
     public void QuitGame()
     {
         Application.Quit();
+    }    
+    public void Instruction()
+    {
+        mainMenu.SetActive(false);
+        instructionPanel.SetActive(true);
     }    
 }
